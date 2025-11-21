@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-primary-dark text-text-primary font-sans antialiased;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-green via-accent-blue to-accent-purple bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-accent-green text-primary-dark px-8 py-4 rounded-xl font-semibold text-lg hover:bg-accent-green/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-accent-green/20;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-accent-green text-accent-green px-8 py-4 rounded-xl font-semibold text-lg hover:bg-accent-green hover:text-primary-dark transition-all duration-300;
+  }
+  
+  .card {
+    @apply bg-card rounded-2xl p-8 hover:shadow-2xl hover:shadow-accent-purple/10 transition-all duration-300;
+  }
+  
+  .feature-card {
+    @apply bg-card rounded-2xl p-8 border border-transparent hover:border-accent-green/30 transition-all duration-300 group;
+  }
+  
+  .badge {
+    @apply px-4 py-2 rounded-full text-sm font-bold;
+  }
+  
+  .badge-creator {
+    @apply badge bg-status-creator/20 text-status-creator border-2 border-status-creator;
+  }
+  
+  .badge-organizer {
+    @apply badge bg-status-organizer/20 text-status-organizer border-2 border-status-organizer;
+  }
+  
+  .badge-soulchild {
+    @apply badge bg-status-soulchild/20 text-status-soulchild border-2 border-status-soulchild;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0E1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4FF00;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8d900;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: #D4FF00;
+  color: #0A0E1A;
+}
