@@ -6,7 +6,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    /* Removed invalid @apply border-border; */
   }
   body {
     @apply bg-primary-dark text-text-primary font-sans antialiased;
@@ -35,7 +35,8 @@
   }
   
   .feature-card {
-    @apply bg-card rounded-2xl p-8 border border-transparent hover:border-accent-green/30 transition-all duration-300 group;
+    @apply bg-card rounded-2xl p-8 border border-transparent hover:border-accent-green/30 transition-all duration-300;
+    /* 'group' is a parent utility, not for @apply */
   }
   
   .badge {
