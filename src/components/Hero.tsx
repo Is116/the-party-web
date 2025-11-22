@@ -5,7 +5,7 @@ import { FiMusic, FiUsers, FiCalendar } from 'react-icons/fi'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -42,7 +42,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight px-4">
               Welcome to
               <br />
               <span className="gradient-text">Thé Party</span>
@@ -54,7 +54,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-text-secondary mb-6 sm:mb-8 max-w-3xl mx-auto px-4"
           >
             Where Music Meets Community. The platform built for artists, fans, and event organizers.
           </motion.p>
@@ -64,19 +64,19 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-6 mb-12"
+            className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12 px-4"
           >
             <div className="flex items-center space-x-2 text-accent-green">
-              <FiMusic className="text-2xl" />
-              <span className="font-semibold">Accessibility First</span>
+              <FiMusic className="text-xl sm:text-2xl" />
+              <span className="font-semibold text-sm sm:text-base">Accessibility First</span>
             </div>
             <div className="flex items-center space-x-2 text-accent-blue">
-              <FiUsers className="text-2xl" />
-              <span className="font-semibold">Artist Support</span>
+              <FiUsers className="text-xl sm:text-2xl" />
+              <span className="font-semibold text-sm sm:text-base">Artist Support</span>
             </div>
             <div className="flex items-center space-x-2 text-accent-purple">
-              <FiCalendar className="text-2xl" />
-              <span className="font-semibold">Community Owned</span>
+              <FiCalendar className="text-xl sm:text-2xl" />
+              <span className="font-semibold text-sm sm:text-base">Community Owned</span>
             </div>
           </motion.div>
 

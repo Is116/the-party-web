@@ -38,7 +38,7 @@ const StatusBadges = () => {
   ]
 
   return (
-    <section className="py-24 relative">
+    <section className="py-16 sm:py-20 md:py-24 relative">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -47,17 +47,17 @@ const StatusBadges = () => {
           transition={{ duration: 0.8 }}
         >
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
               Gamification: <span className="gradient-text">Status</span>
             </h2>
-            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
               Champion active participation. Users earn special badges based on their contribution frequency.
             </p>
           </div>
 
           {/* Badges Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16">
             {badges.map((badge, index) => (
               <motion.div
                 key={index}

@@ -29,7 +29,7 @@ const AppScreens = () => {
   ]
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-24 relative overflow-hidden">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -38,11 +38,11 @@ const AppScreens = () => {
           transition={{ duration: 0.8 }}
         >
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">
+          <div className="text-center mb-12 sm:mb-16 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
               Beautiful <span className="gradient-text">Design</span>
             </h2>
-            <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
               Every detail crafted for the perfect music experience
             </p>
           </div>

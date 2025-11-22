@@ -50,7 +50,7 @@ const CommunityFeatures = () => {
   ]
 
   return (
-    <section id="community" className="py-24 relative">
+    <section id="community" className="py-16 sm:py-20 md:py-24 relative">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -60,11 +60,11 @@ const CommunityFeatures = () => {
         >
           {/* Forum Economy Section */}
           <div className="mb-24">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-6xl font-bold mb-4">
+            <div className="text-center mb-12 sm:mb-16 px-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
                 Forum <span className="gradient-text">Economy</span>
               </h2>
-              <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-2xl mx-auto">
                 A real economy rewarding valuable community contributions
               </p>
             </div>
@@ -82,12 +82,12 @@ const CommunityFeatures = () => {
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent-green/20 text-accent-green text-3xl mb-6"
+                    className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-accent-green/20 text-accent-green text-2xl sm:text-3xl mb-4 sm:mb-6"
                   >
                     {feature.icon}
                   </motion.div>
-                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                  <p className="text-text-secondary leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">{feature.title}</h3>
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed">{feature.description}</p>
                 </motion.div>
               ))}
             </div>

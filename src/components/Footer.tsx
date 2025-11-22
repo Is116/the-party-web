@@ -44,7 +44,7 @@ const Footer = () => {
     <footer className="relative bg-primary-dark/50 backdrop-blur-lg border-t border-text-secondary/10">
       <div className="section-container">
         {/* Main Footer Content */}
-        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-6 gap-12">
+        <div className="py-12 sm:py-16 grid sm:grid-cols-2 lg:grid-cols-6 gap-8 sm:gap-10 md:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <motion.a
@@ -55,9 +55,9 @@ const Footer = () => {
               <div className="w-12 h-12 bg-accent-green rounded-2xl flex items-center justify-center">
                 <span className="text-2xl">🎵</span>
               </div>
-              <span className="text-2xl font-bold">Thé Party</span>
+              <span className="text-xl sm:text-2xl font-bold">Thé Party</span>
             </motion.a>
-            <p className="text-text-secondary mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6 leading-relaxed">
               Where music meets community. Built for artists, fans, and event organizers who believe in a better way to connect.
             </p>
             {/* Social Links */}
@@ -98,23 +98,23 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Section */}
-        <div className="py-12 border-t border-text-secondary/10">
-          <div className="max-w-xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4">Stay in the Loop</h3>
-            <p className="text-text-secondary mb-6">
+        <div className="py-8 sm:py-12 border-t border-text-secondary/10">
+          <div className="max-w-xl mx-auto text-center px-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Stay in the Loop</h3>
+            <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6">
               Get updates on new features, artist spotlights, and exclusive events.
             </p>
-            <form className="flex gap-3">
+            <form className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 bg-card px-6 py-4 rounded-xl border border-text-secondary/20 focus:border-accent-green outline-none transition-colors"
+                className="flex-1 bg-card px-4 py-3 sm:px-6 sm:py-4 rounded-xl border border-text-secondary/20 focus:border-accent-green outline-none transition-colors text-sm sm:text-base"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="bg-accent-green text-primary-dark px-8 py-4 rounded-xl font-semibold hover:bg-accent-green/90 transition-all"
+                className="bg-accent-green text-primary-dark px-6 py-3 sm:px-8 sm:py-4 rounded-xl font-semibold hover:bg-accent-green/90 transition-all whitespace-nowrap text-sm sm:text-base"
               >
                 Subscribe
               </motion.button>

@@ -67,7 +67,7 @@ const Features = () => {
   }
 
   return (
-    <section id="features" className="py-24 relative">
+    <section id="features" className="py-16 sm:py-20 md:py-24 relative">
       <div className="section-container">
         <motion.div
           ref={ref}
@@ -76,17 +76,17 @@ const Features = () => {
           variants={containerVariants}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">
+          <motion.div variants={itemVariants} className="text-center mb-12 sm:mb-16 px-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">
               Core <span className="gradient-text">Architecture</span>
             </h2>
-            <p className="text-xl text-text-secondary max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-text-secondary max-w-3xl mx-auto">
               Everything you need to connect, discover, and thrive in the music community
             </p>
           </motion.div>
 
           {/* Features List */}
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
