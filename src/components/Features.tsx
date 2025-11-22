@@ -50,18 +50,19 @@ const Features = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
+        ease: "easeOut",
       },
     },
   }
@@ -93,17 +94,17 @@ const Features = () => {
                 variants={itemVariants}
                 className="card"
               >
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
                   {/* Icon & Title */}
                   <div>
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent-green/20 text-accent-green mb-6"
+                      className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-accent-green/20 text-accent-green mb-4 sm:mb-6"
                     >
                       {feature.icon}
                     </motion.div>
-                    <h3 className="text-3xl font-bold mb-4">{feature.title}</h3>
-                    <p className="text-text-secondary text-lg leading-relaxed mb-6">
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">{feature.title}</h3>
+                    <p className="text-sm sm:text-base md:text-lg text-text-secondary leading-relaxed mb-4 sm:mb-6">
                       {feature.description}
                     </p>
                     <a href="#download">
@@ -119,15 +120,15 @@ const Features = () => {
                   </div>
 
                   {/* Feature Details */}
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     {feature.details.map((detail, idx) => (
                       <motion.div
                         key={idx}
                         whileHover={{ x: 10 }}
-                        className="flex items-start space-x-3 p-4 bg-primary-dark/50 rounded-xl"
+                        className="flex items-start space-x-2 sm:space-x-3 p-3 sm:p-4 bg-primary-dark/50 rounded-xl"
                       >
-                        <span className="text-accent-green text-xl mt-0.5">✓</span>
-                        <span className="text-text-secondary">{detail}</span>
+                        <span className="text-accent-green text-lg sm:text-xl mt-0.5">✓</span>
+                        <span className="text-sm sm:text-base text-text-secondary">{detail}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -137,21 +138,21 @@ const Features = () => {
           </div>
 
           {/* Additional Features Grid */}
-          <motion.div variants={itemVariants} className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div variants={itemVariants} className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <div className="feature-card">
-              <FiUsers className="text-3xl text-accent-green mb-4" />
-              <h4 className="font-bold text-xl mb-2">Social Feed</h4>
-              <p className="text-text-secondary text-sm">Chronological feed with no algorithmic manipulation</p>
+              <FiUsers className="text-2xl sm:text-3xl text-accent-green mb-3 sm:mb-4" />
+              <h4 className="font-bold text-lg sm:text-xl mb-2">Social Feed</h4>
+              <p className="text-text-secondary text-xs sm:text-sm">Chronological feed with no algorithmic manipulation</p>
             </div>
             <div className="feature-card">
-              <FiTrendingUp className="text-3xl text-accent-purple mb-4" />
-              <h4 className="font-bold text-xl mb-2">Status Badges</h4>
-              <p className="text-text-secondary text-sm">Earn Creator, Organizer, or Soulchild badges</p>
+              <FiTrendingUp className="text-2xl sm:text-3xl text-accent-purple mb-3 sm:mb-4" />
+              <h4 className="font-bold text-lg sm:text-xl mb-2">Status Badges</h4>
+              <p className="text-text-secondary text-xs sm:text-sm">Earn Creator, Organizer, or Soulchild badges</p>
             </div>
             <div className="feature-card">
-              <FiMusic className="text-3xl text-accent-blue mb-4" />
-              <h4 className="font-bold text-xl mb-2">Discovery</h4>
-              <p className="text-text-secondary text-sm">Find music through organic connections</p>
+              <FiMusic className="text-2xl sm:text-3xl text-accent-blue mb-3 sm:mb-4" />
+              <h4 className="font-bold text-lg sm:text-xl mb-2">Discovery</h4>
+              <p className="text-text-secondary text-xs sm:text-sm">Find music through organic connections</p>
             </div>
           </motion.div>
         </motion.div>
